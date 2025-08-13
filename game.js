@@ -173,7 +173,7 @@ checkBtn.addEventListener('click', () => {
   const correct = templateDNA.split('').map(compBase).join('');
   if (input === correct) {
     instructions.textContent = 'Awesome! Complementary strand synthesized.'; instructions.style.color = 'green';
-    imageEl.src = '../image/completestrand.jpg';
+    imageEl.src = 'completestrand.jpg';
     inputBox.classList.add('hidden');
     currentStep = 6; // move to next enzyme (DNA Pol I)
   } else {
@@ -208,7 +208,7 @@ function handleCheck() {
   const correct = templateDNA.split('').map(compBase).join('');
   if (input === correct) {
     instructions.textContent = 'Awesome! Complementary strand synthesized.'; instructions.style.color = 'green';
-    imageEl.src = '../image/completestrand.jpg';
+    imageEl.src = 'completestrand.jpg';
     inputBox.classList.add('hidden');   // ← ซ่อนอินพุตเมื่อถูก
     awaitingComplement = false;
     currentStep = 6;                    // ← ค่อยขยับขั้นตอนที่นี่
