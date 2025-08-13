@@ -3,11 +3,11 @@ const ENZYMES = [
   {
     id: "topoisomerase",
     name: "Topoisomerase",
-    img: "../image/Topoisomerase.png",
+    img: "Topoisomerase.png",
   },
-  { id: "helicase", name: "Helicase", img: "../image/helicase.png" },
-  { id: "primase", name: "Primase", img: "../image/primase.png" },
-  { id: "ligase", name: "Ligase", img: "../image/ligase.png" },
+  { id: "helicase", name: "Helicase", img: "helicase.png" },
+  { id: "primase", name: "Primase", img: "primase.png" },
+  { id: "ligase", name: "Ligase", img: "ligase.png" },
   {
     id: "dna_pol_iii",
     name: "DNA Polymerase III",
