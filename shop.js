@@ -11,15 +11,15 @@ const ENZYMES = [
   {
     id: "dna_pol_iii",
     name: "DNA Polymerase III",
-    img: "../image/DNA_pol_iii.png",
+    img: "DNA_pol_iii.png",
   },
-  { id: "dna_pol_i", name: "DNA Polymerase I", img: "../image/DNA_pol_i.png" },
+  { id: "dna_pol_i", name: "DNA Polymerase I", img: "DNA_pol_i.png" },
   {
     id: "SSB_Protein",
     name: "SSB_Protein",
-    img: "../image/SSB_Protein-fotor-bg-remover-20250811192919.png",
+    img: "SSB_Protein-fotor-bg-remover-20250811192919.png",
   },
-  { id: "oxidoreductase", name: "Oxidoreductase", img: "../image/Oxidoreductase.png" },
+  { id: "oxidoreductase", name: "Oxidoreductase", img: "Oxidoreductase.png" },
   { id: "amylase", name: "Amylase", color: "#39B4E6" },
 ];
 
