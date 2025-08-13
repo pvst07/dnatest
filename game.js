@@ -75,7 +75,7 @@ function chooseEnzyme(enzymeId){
       if (enzymeId === 'topoisomerase') {
         instructions.textContent = 'Great! DNA is relaxing…'; instructions.style.color = 'green';
         setImageSequence(
-          ['../image/topo1.jpg','../image/topo2.jpg','../image/topo3.jpg','../image/topo4.jpg','../image/uncoiledDNA.jpg'],
+          ['topo1.jpg','topo2.jpg','topo3.jpg','topo4.jpg','uncoiledDNA.jpg'],
           [0,400,800,1200,1700]
         );
         currentStep = 2;
@@ -87,7 +87,7 @@ function chooseEnzyme(enzymeId){
     case 2: // Helicase
       if (enzymeId === 'helicase') {
         instructions.textContent = 'Well done! Helicase opened the strands.'; instructions.style.color = 'green';
-        imageEl.src = '../image/helicase.jpg';
+        imageEl.src = 'helicase.jpg';
         currentStep = 3;
       } else {
         instructions.textContent = 'Your DNA is still double helix; you cannot proceed the replication like this!'; instructions.style.color = 'red';
@@ -97,7 +97,7 @@ function chooseEnzyme(enzymeId){
     case 3: // SSB
       if (enzymeId === 'SSB_Protein') {
         instructions.textContent = 'Nice! SSB keeps strands apart.'; instructions.style.color = 'green';
-        imageEl.src = '../image/ssb.jpg';
+        imageEl.src = 'ssb.jpg';
         currentStep = 4;
       } else {
         instructions.textContent = 'Your DNA strands are rejoining. Try another enzyme.'; instructions.style.color = 'red';
@@ -107,7 +107,7 @@ function chooseEnzyme(enzymeId){
     case 4: // Primase
       if (enzymeId === 'primase') {
         instructions.textContent = 'Good! Primers are in. Time to add nucleotides!'; instructions.style.color = 'green';
-        imageEl.src = '../image/primase.jpg';
+        imageEl.src = 'primase.jpg';
         currentStep = 5;
        
       } 
@@ -118,7 +118,7 @@ function chooseEnzyme(enzymeId){
 
     case 5: // waiting for user to type complement (handled by CHECK button)
       if (enzymeId === 'dna_pol_iii' && !awaitingComplement) {
-        imageEl.src = '../image/dnapol3.jpg';
+        imageEl.src = 'dnapol3.jpg';
         instructions.textContent = 'Enter the complementary strand and press CHECK.'; instructions.style.color = 'green';
         // show the input ONLY now
         templateDNA = generateRandomDNA(6);
@@ -136,7 +136,7 @@ function chooseEnzyme(enzymeId){
     case 6: // DNA Pol I
       if (enzymeId === 'dna_pol_i') {
         instructions.textContent = 'Great! DNA Polymerase I replaced primers.'; instructions.style.color = 'green';
-        imageEl.src = '../image/dnapol1.jpg';
+        imageEl.src = 'dnapol1.jpg';
         currentStep = 7;
       } else {
         instructions.textContent =  'There is still something a little bit off on the replicated sides. Maybe replace something?'; instructions.style.color = 'red';
@@ -146,12 +146,12 @@ function chooseEnzyme(enzymeId){
     case 7: // Ligase
       if (enzymeId === 'ligase') {
         instructions.textContent = 'Congrats! Ligase sealed the gaps!'; instructions.style.color = 'green';
-        imageEl.src = '../image/ligase.jpg';
+        imageEl.src = 'ligase.jpg';
 
         setTimeout(() => {
           instructions.textContent = 'You finished the game! Refresh to play again.'; instructions.style.color = 'green';
-          imageEl.src = '../image/ligase.jpg';
-          imageEl.src = '../image/DNA-finish.jpg';
+          imageEl.src = 'ligase.jpg';
+          imageEl.src = 'DNA-finish.jpg';
         }, 3000);
       } else {
         instructions.textContent = 'The gaps have not been sealed!!'; instructions.style.color = 'red';
