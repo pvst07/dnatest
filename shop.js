@@ -51,7 +51,7 @@ document.getElementById("goBtn").addEventListener("click", (e) => {
   e.preventDefault();
   // persist and go
   saveSelected();
-  window.location.href = '../game/game.html';
+  window.location.href = 'game.html';
 });
 
 // ---------- functions ----------
