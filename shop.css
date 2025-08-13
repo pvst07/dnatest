@@ -1,0 +1,218 @@
+:root{
+  --bg:#fdecae;
+  --panel:#f6c371;
+  --green:#2e7d32;
+  --go:#2f5648;
+  --plus:#33b164;
+  --minus:#d0352c;
+  --shadow:0 10px 0 rgba(0,0,0,.15);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:'Luckiest Guy', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  letter-spacing:.5px;
+  color:#141414;
+}
+
+/* header */
+.topbar{
+  display:flex; align-items:center; gap:10px;
+  padding:20px 22px 0;
+}
+.topbar .icon-btn{
+  border:none; background:transparent; font-size:38px; cursor:pointer; line-height:1;
+}
+.topbar h1{
+  flex:1;
+  text-align:center;
+  font-size:48px; line-height:.95; margin:0 20px 10px;
+}
+.topbar h1 span{
+  display:block; font-size:58px;
+}
+
+/* layout */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:10px 20px 40px;
+  position:relative;
+}
+
+/* enzyme grid */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:36px 30px;
+  margin-top:14px;
+}
+@media (max-width:980px){
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width:560px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+.card{
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+}
+.circle{
+  width:120px; height:120px; border-radius:50%;
+  box-shadow:var(--shadow);
+  
+}
+.pic img {
+  width:120px; height:120px; border-radius:50%;
+  object-fit: cover;
+}
+
+.controls{
+  display:flex; gap:14px; margin-top:-18px;
+}
+.ctrl{
+  width:46px; height:46px; border-radius:50%;
+  border:none; cursor:pointer;
+  color:#111; font-size:26px; line-height:46px;
+  display:grid; place-items:center;
+  box-shadow:var(--shadow);
+}
+.ctrl.plus{ background:var(--plus); }
+.ctrl.minus{ background:var(--minus); }
+
+.label{
+  margin-top:6px; text-align:center; font-size:22px;
+  text-transform:uppercase;
+}
+
+/* .cart{
+  margin-top:28px;
+  background:var(--panel);
+  border-radius:80px;
+  padding:20px 26px;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:20px;
+  box-shadow:var(--shadow);
+} */
+.cart-left{ display:flex; align-items:center; gap:18px; }
+.cart-title{ font-size:28px; }
+
+.bag-icon{ position:relative; width:60px; height:60px; }
+.bag-body{
+  position:absolute; left:8px; right:8px; bottom:0; height:46px; background:#222; border-radius:14px;
+}
+.bag-handle{
+  position:absolute; left:17px; right:17px; top:2px; height:22px; border:6px solid #222;
+  border-bottom:none; border-top-left-radius:18px; border-top-right-radius:18px;
+}
+
+.dot-track{
+  display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  padding:6px 4px;
+}
+.dot{
+  width:46px; height:46px; border-radius:50%;
+  box-shadow:var(--shadow);
+}
+
+.dot.dot-img{
+  overflow:hidden; display:grid; place-items:center;
+}
+.dot.dot-img img{
+  width:100%; height:100%; object-fit:cover; display:block;
+}
+.ctrl.plus.disabled {
+  background: #a5d6a7; /* pale green */
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.ctrl.plus:disabled {
+  pointer-events: none;
+}
+
+/* #clearBtn {
+  left: 20px; 
+  right: auto;
+  background: #d0352c; 
+  border-radius:10%;
+  position:fixed ;bottom:36px;
+  width:130px; height:100px; 
+  color:#fff; 
+  display:grid; place-items:center; font-size:45px; letter-spacing:1px;
+  box-shadow:var(--shadow);
+}
+
+.go-btn{
+
+  position:fixed; right:36px; bottom:36px;
+  width:100px; height:100px; border-radius:50%;
+  background:var(--go); color:#fff; text-decoration:none;
+  display:grid; place-items:center; font-size:54px; letter-spacing:2px;
+  box-shadow:var(--shadow);
+} */
+ 
+ .cart{
+  flex: 1;             
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 30px 30px;
+  background: #f2bb66;
+  border-radius: 28px;
+  box-shadow: 0 8px 0 #dacd95;
+
+}
+
+.clear-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width:130px; height:100px; border-radius:10%;
+  font-size:40px; letter-spacing:2px;
+  padding: 0 20px;
+  background: #e34b4b;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 8px 0 #cfae7a;
+  font-weight: 800;
+}
+
+/* ปุ่ม GO กลมชิดขวา */
+.go-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width:100px; height:100px; border-radius:50%;
+  font-size:40px; letter-spacing:2px;
+  background: #2c5a4e;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 10px 0 #d9cf9b;
+  font-weight: 800;
+}
+
+
+
+.warning {
+  font-size: 20px;
+  font-family: 'Luckiest Guy', sans-serif;
+  color: #d0352c;  /* same red as minus button */
+  text-align: center;
+  min-height: 5px; /* keep space reserved even when empty */
+}
+.bottom-bar{
+  position: sticky;      /* ติดก้นจอเวลาเลื่อน */
+  bottom: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+}
+
+@media (max-width:560px){
+  .go-btn{ width:130px; height:130px; font-size:44px; right:20px; bottom:20px;}
+}
